@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ownKeys = exports.omit = exports.merge = exports.forOwn = exports.assign = void 0;
+var assign_1 = require("./assign/assign");
+Object.defineProperty(exports, "assign", { enumerable: true, get: function () { return assign_1.assign; } });
+var forOwn_1 = require("./forOwn/forOwn");
+Object.defineProperty(exports, "forOwn", { enumerable: true, get: function () { return forOwn_1.forOwn; } });
+var merge_1 = require("./merge/merge");
+Object.defineProperty(exports, "merge", { enumerable: true, get: function () { return merge_1.merge; } });
+var omit_1 = require("./omit/omit");
+Object.defineProperty(exports, "omit", { enumerable: true, get: function () { return omit_1.omit; } });
+var ownKeys_1 = require("./ownKeys/ownKeys");
+Object.defineProperty(exports, "ownKeys", { enumerable: true, get: function () { return ownKeys_1.ownKeys; } });
