@@ -1,0 +1,126 @@
+@media (max-width: 1024px) {
+  main {
+    width: 100vw;
+  }
+
+  #navButtons {
+    position: fixed;
+    top: 90%;
+    left: 0;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    background: transparent;
+    margin-bottom: 50px;
+    animation: none;
+  }
+
+  #navButtons div {
+    display: flex;
+  }
+
+  #navButtons img {
+    width: 60px;
+    margin: 5px;
+  }
+
+  #contactIkons {
+    display: none;
+  }
+
+  #hero img {
+    width: 170px;
+    margin-top: 20px;
+  }
+
+  #hero h1 {
+    font-size: 1.5em;
+    width: 90vw;
+  }
+
+  #aboutMe {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 80px;
+  }
+
+  #aboutMe .threeBox {
+    display: flex;
+    flex-direction: column !important;
+    justify-self: center;
+    align-items: center;
+  }
+
+  #aboutMe .threeBox div {
+    width: 100% !important;
+    margin-top: 30px;
+  }
+
+  .line {
+    max-width: 80vw;
+  }
+
+  #projects {
+    max-width: 100vw;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  .project {
+    position: relative;
+    transition: 300ms;
+    border: none;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .project img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #contact #form {
+    background: none;
+    border-radius: 10px;
+    text-align: center;
+    animation: 4s titleOpen 1s forwards;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 20px auto;
+    background: transparent !important;
+  }
+
+  #contact input {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  #aboutMe .aboutMeDesc {
+    text-align: justify !important;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}

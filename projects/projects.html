@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./projects.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Russo+One&display=swap");
+    </style>
+    <title>Portfolio Details</title>
+  </head>
+  <body>
+    <a href="./projects.html" class="back-btn">SHOW LIST</a>
+    <a href="../#portfolios" class="home-btn">BACK</a>
+    <!-- mobile menu -->
+    <section id="mobileMenu">
+      <h1 id="projectTitleMobile">Choose a project:</h1>
+      <ul>
+        <li onclick="javascript:myFunc(0)">1. weather app</li>
+        <li onclick="javascript:myFunc(1)">2. brekkteam website</li>
+        <li onclick="javascript:myFunc(2)">3. random quote generator</li>
+        <li onclick="javascript:myFunc(3)">4. happy gyros</li>
+        <li onclick="javascript:myFunc(4)">5. Hairdresser website</li>
+        <li onclick="javascript:myFunc(5)">
+          4. react interactive form validation
+        </li>
+        <li onclick="javascript:myFunc(6)">6. to do app</li>
+        <li onclick="javascript:myFunc(7)">7. fylo dark theme landing page</li>
+        <li onclick="javascript:myFunc(8)">8. runaway portfolio site</li>
+        <li onclick="javascript:myFunc(9)">9. loop studios</li>
+        <li onclick="javascript:myFunc(10)">10. social media dashboard</li>
+        <li onclick="javascript:myFunc(11)">11. porto website</li>
+        <li onclick="javascript:myFunc(12)">12. time tracking dashboard</li>
+        <li onclick="javascript:myFunc(13)">13. tip cault</li>
+        <li onclick="javascript:myFunc(14)">14. reading helper</li>
+        <li onclick="javascript:myFunc(15)">15. what to watch today</li>
+      </ul>
+    </section>
+    <!-- dashboard -->
+    <section id="dashboard">
+      <div id="choseProjectHandle" class="col-md-3">
+        <!-- rendering the left projects on dashboard with javascript here -->
+      </div>
+      <div class="col-md-9 container">
+        <!-- ---------------------------- -->
+        <section id="theProject">
+          <h1 id="projectTitle">
+            <i class="fa-solid fa-angles-left"></i> Choose a project!
+          </h1>
+          <!-- render the active project with javascript here -->
+        </section>
+      </div>
+    </section>
+    <script src="./projects.js"></script>
+  </body>
+</html>

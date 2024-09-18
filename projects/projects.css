@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainOrange: #ffc045;
+  --mainDarkBlue: #132f4e;
+  --mainLightBlue: #3ad1f2;
+  --white: rgb(242, 240, 240);
+}
+
+body {
+  background: var(--mainDarkBlue);
+}
+
+.basic-space {
+  padding-top: 1em;
+}
+
+#theProject {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--mainOrange);
+  text-align: center;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+}
+
+h3 {
+  color: var(--mainLightBlue);
+}
+
+p {
+  color: var(--white);
+}
+
+a {
+  color: var(--mainOrange);
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  background: var(--mainOrange);
+  color: var(--mainDarkBlue);
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Russo One", sans-serif;
+  margin-bottom: 3em;
+  padding: 6px 30px;
+}
+
+i {
+  color: var(--mainDarkBlue);
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,663 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainOrange: #ffc045;
+  --mainDarkBlue: #132f4e;
+  --mainLightBlue: #3ad1f2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Russo One", sans-serif;
+  /* mobil nézeten csak ezt kell kisebbre venni a betűk méretéhez */
+  font-size: 18px;
+}
+
+body p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+@keyframes opacityAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*********************************************** DARK MODE / MUSIC ************************************************/
+#musicAndDarkMode {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  z-index: 9999;
+  text-align: center;
+}
+
+#musicAndDarkMode .music-dark-mode-container {
+  width: 100%;
+  height: 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-mode-container,
+.music-container {
+  width: auto; /* ezt átírhatod majd auto-ra */
+  height: 50px;
+  background: green;
+  position: relative;
+}
+
+.dark-mode-text,
+.musicText {
+  position: absolute;
+  top: 10px;
+  color: var(--mainOrange);
+}
+.dark-mode-text {
+  left: 0px;
+}
+.musicText {
+  right: 0px;
+}
+
+#darkModeBtn,
+#musicBtn {
+  position: absolute;
+  top: 35px;
+  background: var(--mainLightBlue);
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 3px;
+  cursor: pointer;
+  transition: 500ms;
+}
+#darkModeBtn {
+  left: 0px;
+}
+#musicBtn {
+  right: 0px;
+}
+
+#darkModeCircleBtn,
+#musicCircleBtn {
+  width: 24px;
+  height: 24px;
+  background: var(--mainDarkBlue);
+  border-radius: 50%;
+  transition: 300ms;
+}
+.darkModeOn {
+  margin-left: 20px;
+  transition: 300ms;
+}
+.dark-mode-BG {
+  background: var(--mainOrange) !important;
+  transition: 500ms;
+}
+
+.musicOn {
+  margin-left: 20px;
+  transition: 300ms;
+}
+.music-on-BG {
+  background: var(--mainOrange) !important;
+  transition: 500ms;
+}
+
+/************************************** NAV BUTTONS *****************************************/
+#navButtons {
+  position: fixed;
+  top: 0;
+  right: -5%;
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 8000;
+  animation: 2s NavBtnSpin 2s forwards;
+}
+
+#navButtons img {
+  width: 80px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes NavBtnSpin {
+  0% {
+    right: -5%;
+  }
+  100% {
+    right: 5%;
+  }
+}
+/************************************** CONTACT ICONS *****************************************/
+#contactIcons {
+  position: fixed;
+  top: 20%;
+  left: -50px;
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 100;
+  animation: 1.5s svgIcons 2.5s forwards;
+  transition: 300ms;
+  display: none;
+}
+
+#contactIcons div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contactIcons a {
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+#contactIcons a i {
+  color: var(--mainDarkBlue);
+  transition: 200ms;
+}
+
+#contactIcons a:hover i {
+  color: var(--mainLightBlue) !important;
+  transition: 200ms;
+  margin-left: 20px;
+}
+
+.dark-mode-contact-icon {
+  color: var(--mainOrange) !important;
+}
+
+@keyframes svgIcons {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #contactIcons {
+    display: block;
+  }
+}
+/***************************************** ANIMATED BACKGROUND ********************************************/
+#animatedBG {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #d4ebf2;
+  text-align: center;
+  z-index: -100;
+}
+
+.bg {
+  position: absolute;
+  background: #d4ebf2;
+  width: 0%;
+  height: 100%;
+  animation: 6s bgSlider infinite;
+  opacity: 0.4;
+}
+
+.bg2 {
+  background: #d4ebf2;
+  animation: 7s bgSlider infinite;
+}
+
+.bg3 {
+  background: #d4ebf2;
+  animation: 8s bgSlider infinite;
+  right: 0;
+}
+
+.bg4 {
+  background: #d4ebf2;
+  animation: 9s bgSlider 1s infinite;
+  right: 0;
+}
+
+.animatedBG-dark {
+  background: #162552 !important;
+}
+.bg-dark {
+  background: #22bbdb !important;
+}
+.bg2-dark {
+  background: #162552 !important;
+}
+.bg3-dark {
+  background: #234870 !important;
+}
+.bg4-dark {
+  background: #0c95b1 !important;
+}
+
+@keyframes bgSlider {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+/***************************************** CONTAINER ********************************************/
+.container p {
+  color: #191919;
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.dark-mode-pTags {
+  color: white !important;
+}
+
+/***************************************** HERO ********************************************/
+#hero {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.intro-text-container {
+  height: 50px;
+  background: red;
+}
+
+#hero #hello {
+  margin-top: 3em;
+}
+
+#hero h1 {
+  /* padding-top: 10px; */
+  font-size: 2em;
+  color: black;
+  color: var(--mainDarkBlue);
+  font-family: "Russo One", sans-serif;
+}
+
+.dark-mode-hero-text {
+  color: white !important;
+}
+
+.splide {
+  width: 350px;
+}
+
+@media (max-width: 480px) {
+  .splide {
+    width: 100vw;
+  }
+  .splide li img {
+    transform: scale(0.7);
+  }
+  #hero h1 {
+    font-size: 1.8em;
+    margin-top: 0px;
+    width: 100vw;
+  }
+}
+
+.splide__arrow--next,
+.splide__arrow--prev {
+  background: var(--mainOrange);
+}
+
+.splide__arrow svg {
+  fill: var(--mainDarkBlue);
+}
+
+.splide__pagination li {
+  margin-bottom: -25px;
+}
+
+.splide__pagination__page {
+  background: var(--mainOrange);
+}
+
+.splide__pagination__page.is-active {
+  background: var(--mainLightBlue);
+}
+
+.cv-download-btn {
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+  background: var(--mainOrange);
+  color: var(--mainDarkBlue);
+  font-size: 1.1em;
+  margin-top: 30px;
+  font-weight: 700;
+  z-index: 9999;
+  font-family: "Russo One", sans-serif;
+  text-decoration: none;
+}
+
+/* Splide doesn't show on phone - landscape mode */
+@media (min-width: 481px) and (max-width: 767px) {
+  .splide {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: 2.5em !important;
+  }
+
+  #hero #hello {
+    margin-top: 3em;
+  }
+}
+/***************************************** TITLES ********************************************/
+.title-container {
+  width: 100%;
+  /* width: 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 0%; */
+  /* animation: 4s titleOpen forwards ease-out; */
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 3em;
+}
+
+@media (max-width: 480) {
+  .title-container {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+.title-container h1 {
+  color: var(--mainOrange);
+  font-size: 2.5em;
+  font-family: "Russo One", sans-serif;
+  margin-top: auto;
+  padding-bottom: 0;
+  line-height: 0.6;
+}
+
+.line {
+  border-bottom: 3px solid var(--mainOrange);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/***************************************** ABOUT ME ********************************************/
+#aboutMe {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0 !important;
+}
+
+#aboutMe .aboutMeDesc {
+  max-width: 900px;
+  margin: 2em auto 0;
+}
+
+.profil-img {
+  width: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+@media (min-width: 481px) {
+  .profil-img {
+    display: block;
+  }
+}
+
+#aboutMe h3 {
+  color: var(--mainOrange);
+  font-family: "Russo One", sans-serif;
+  font-size: 1.5em;
+}
+.dark-mode-subtitle {
+  color: var(--mainLightBlue) !important;
+}
+
+#aboutMe .profile-img-container {
+  background-image: url("../images/profileImg.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#aboutMe .threeBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 4em;
+}
+
+#aboutMe .container .threeBox div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  width: 30%;
+  margin-top: 0;
+}
+
+/* i dont need this animation, i will use wow.js, that is more better */
+/* @keyframes titleOpen {
+  0% {
+    /* width: 0%; */
+/* width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+/***************************************** PORTFOLIOS ********************************************/
+#portfolios {
+  width: 100vw;
+  height: auto;
+  padding-bottom: 50px;
+  overflow-y: visible;
+}
+
+#frontendmentor-link {
+  color: var(--mainDarkBlue);
+}
+
+.dark-mode-frontendmentor-link {
+  color: var(--mainOrange) !important;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: 1s opacityAnim forwards ease-out;
+  z-index: 500;
+}
+
+.portfolioDescription {
+  max-width: 900px;
+  margin: 2em auto 2em !important;
+}
+
+.portfolioDescription a {
+  color: white;
+}
+
+.project {
+  margin: 0 auto 20px;
+  width: 400px;
+  max-width: 400px;
+  height: 250px;
+  position: relative;
+  transition: 300ms;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.project:hover a,
+.project:focus a,
+.project:active a,
+.project:visited a {
+  opacity: 1 !important;
+}
+
+.project:hover img,
+.project:focus img,
+.project:active img,
+.project:visited img {
+  /* filter: blur(5px); */
+}
+
+.project img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 300ms;
+  transform: scale(1);
+}
+
+.project a {
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 90px);
+  color: var(--mainOrange);
+  background: var(--mainDarkBlue);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  opacity: 0;
+  /* transition: 300ms; */
+  transition: 0ms;
+  z-index: 9999;
+  width: 180px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.scroll-down {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  animation: 2s scrollDown 3.8s 2 forwards;
+  opacity: 0;
+  background: var(--mainOrange);
+  z-index: 9999;
+}
+
+/***************************************** CONTACT ********************************************/
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: flex-start;
+}
+
+#contact #form {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: var(--mainLightBlue);
+  border-radius: 10px;
+  margin-top: 60px;
+  text-align: center;
+  /* animation: 4s titleOpen 1s forwards; */
+  overflow: hidden;
+  max-width: 400px;
+  z-index: 9999;
+  margin: 2em auto 0;
+}
+.dark-mode-formBG {
+  background: var(--mainDarkBlue) !important;
+}
+
+#contact input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+#contact #msg {
+  height: 120px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#contact #message {
+  height: 120px;
+}
+
+#contact button {
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  height: 40px;
+  background: var(--mainOrange);
+  color: var(--mainDarkBlue);
+  font-size: 1.1em;
+  margin-top: 20px;
+  font-weight: 700;
+  z-index: 9999;
+  font-family: "Russo One", sans-serif;
+}
+
+#emailErrorMsg,
+#nameErrorMsg {
+  height: 0px;
+  color: white;
+}
